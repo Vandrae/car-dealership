@@ -4,7 +4,16 @@ import java.util.Scanner;
 
 public class UserInterface {
 
+    //    Add supporting methods:
+    //
+    //    displayVehicles(List<Vehicle> list) – Loops through and displays each vehicle.
+    //    Used by all the “get vehicles” features.
+
+    //    processAllVehiclesRequest() – Calls dealership.getAllVehicles() and passes the result to displayVehicles().
+
+
     Scanner input = new Scanner(System.in);
+    private Dealership dealership;
     public String display(){
         init();
         String choice = "";
@@ -47,10 +56,14 @@ public class UserInterface {
             }
         }while (!choice.equals("99"));
 
-        // ends loop
+        // ends loop12
         return choice;
     }
-    private void init(){}
+        //need to practice stuff like this
+    private void init(){
+        DealershipFileManager dealershipFileManager = new DealershipFileManager();
+        dealership = dealershipFileManager.getDealership();
+    }
 
     public void priceRangeSearch(){
     }
@@ -78,6 +91,14 @@ public class UserInterface {
 
     public void removeVehicle(){
     }
+
+
+
+
+
+
+
+
 
 
 }
