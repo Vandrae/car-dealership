@@ -25,6 +25,7 @@ public class UserInterface {
             System.out.println();
             choice = input.nextLine();
 
+            //does things based on user input
             if (choice.equals("1")){
                 priceRangeSearch();
             } else if (choice.equals("2")){
@@ -46,7 +47,7 @@ public class UserInterface {
             }
         }while (!choice.equals("99"));
 
-
+        // ends loop
         return choice;
     }
     private void init(){}
