@@ -9,11 +9,11 @@ public class Dealership {
     //might need to change <String> to int or something else
     private ArrayList<Vehicle> inventory;
 
-    public Dealership(String name, String address, String phoneNum, ArrayList<Vehicle> inventory) {
+    public Dealership(String name, String address, String phoneNum) {
         this.name = name;
         this.address = address;
         this.phoneNum = phoneNum;
-        this.inventory = inventory;
+        this.inventory = new ArrayList<Vehicle>();
     }
 
     public String getName() {
@@ -45,13 +45,23 @@ public class Dealership {
         inventory.add(vehicle);
     }
 
-    public  Vehicle getAllVehicle(Vehicle vehicle){
-        // maybe a get. for each variable of a vehicle
-
-        return null;
+    public  ArrayList<Vehicle> getAllVehicle(){
+        //all stored in the array list
+        //need to display all things on the array list
+        return inventory;
     }
 
     public void removeVehicle(){
 
+    }
+
+    @Override
+    public String toString() {
+        return "Dealership{" +
+                "name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", phoneNum='" + phoneNum + '\'' +
+                ", inventory=" + inventory +
+                '}';
     }
 }

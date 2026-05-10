@@ -1,9 +1,12 @@
 package com.pluralsight;
 
-public class DealershipApp {
+import java.util.Scanner;
 
+public class DealershipApp {
+Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Menu.mainMenu();
+        UserInterface ui = new UserInterface();
+        ui.display();
     }
 }
