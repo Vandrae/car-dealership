@@ -32,28 +32,43 @@ public class UserInterface {
             System.out.println("9) - Remove a vehicle ");
             System.out.println("99) - Quit ");
             System.out.println();
-            choice = input.nextLine();
+            //validates for a number input
 
-            //does things based on user input
-            if (choice.equals("1")){
-                priceRangeSearch();
-            } else if (choice.equals("2")){
-                makeModelSearch();
-            }else if (choice.equals("3")){
-                yearRangeSearch();
-            }else if (choice.equals("4")){
-                colorSearch();
-            }else if (choice.equals("5")){
-                mileRangeSearch();
-            }else if (choice.equals("6")){
-                typeSearch();
-            }else if (choice.equals("7")){
-                allVehicleSearch();
-            }else if (choice.equals("8")){
-                addVehicle();
-            }else if (choice.equals("9")){
-                removeVehicle();
+            if (input.hasNextInt()) {
+                choice = input.nextLine();
             }
+            input.nextLine();
+
+            switch (choice){
+                case "1":
+                    priceRangeSearch();
+                    break;
+                case "2":
+                    makeModelSearch();
+                    break;
+                case "3":
+                    yearRangeSearch();
+                    break;
+                case "4":
+                    colorSearch();
+                    break;
+                case "5":
+                    mileRangeSearch();
+                    break;
+                case "6":
+                    typeSearch();
+                    break;
+                case "7":
+                    allVehicleSearch();
+                    break;
+                case "8":
+                    addVehicle();
+                    break;
+                case "9":
+                    removeVehicle();
+                    break;
+            }
+
         }while (!choice.equals("99"));
 
         // ends loop12
@@ -75,6 +90,7 @@ public class UserInterface {
     }
 
     public void colorSearch(){
+
     }
 
     public void mileRangeSearch(){
