@@ -14,6 +14,7 @@ public class UserInterface {
 
     Scanner input = new Scanner(System.in);
     private Dealership dealership;
+
     public String display(){
         init();
         String choice = "";
@@ -37,7 +38,6 @@ public class UserInterface {
             if (input.hasNextInt()) {
                 choice = input.nextLine();
             }
-            input.nextLine();
 
             switch (choice){
                 case "1":
