@@ -1,5 +1,6 @@
 package com.pluralsight;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -78,6 +79,14 @@ public class UserInterface {
     private void init(){
         DealershipFileManager dealershipFileManager = new DealershipFileManager();
         dealership = dealershipFileManager.getDealership();
+    }
+
+    private void displayVehicles(ArrayList<Vehicle> getAllVehicle){
+
+        for (Vehicle vehicle: getAllVehicle){
+            //display the entire list line by line
+            System.out.println(vehicle);
+        }
     }
 
     public void priceRangeSearch(){
