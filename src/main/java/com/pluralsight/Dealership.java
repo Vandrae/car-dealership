@@ -52,7 +52,15 @@ public class Dealership {
     }
 
     public void removeVehicle(){
-
     }
 
+    public ArrayList<Vehicle> getVehicleByPrice(double minPrice, double maxPrice){
+        ArrayList<Vehicle> priceSearch = new ArrayList<Vehicle>();
+        for (Vehicle vehicle : inventory){
+            if (vehicle.getPrice() >= minPrice && vehicle.getPrice() <= maxPrice){
+                priceSearch.add(vehicle);
+            }
+        }
+        return priceSearch;
+    }
 }

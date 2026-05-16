@@ -81,6 +81,48 @@ public class UserInterface {
         dealership = dealershipFileManager.getDealership();
     }
 
+    //Switch Menu Methods
+    public void priceRangeSearch(){
+        System.out.println("what is the min price you are looking for? ");
+        Double minPrice = input.nextDouble();
+        System.out.println("what is the max price you are looking for? ");
+        Double maxPrice = input.nextDouble();
+
+        displayVehicles(dealership.getVehicleByPrice(minPrice,maxPrice));
+    }
+
+    public void makeModelSearch(){
+
+    }
+
+    public void yearRangeSearch(){
+
+    }
+
+    public void colorSearch(){
+
+    }
+
+    public void mileRangeSearch(){
+
+    }
+
+    public void typeSearch(){
+
+    }
+
+    public void allVehicleSearch(){
+        processAllVehiclesRequest();
+    }
+
+    public void addVehicle(){
+
+    }
+
+    public void removeVehicle(){
+
+    }
+
     private void displayVehicles(ArrayList<Vehicle> getAllVehicle){
 
         for (Vehicle vehicle: getAllVehicle){
@@ -89,46 +131,9 @@ public class UserInterface {
         }
     }
 
-    public void priceRangeSearch(){
-    }
-
-    public void makeModelSearch(){
-    }
-
-    public void yearRangeSearch(){
-    }
-
-    public void colorSearch(){
-
-    }
-
-    public void mileRangeSearch(){
-    }
-
-    public void typeSearch(){
-    }
-
-    public void allVehicleSearch(){
-        processAllVehiclesRequest();
-    }
-
     public void processAllVehiclesRequest(){
         displayVehicles(dealership.getAllVehicle());
     }
 
-    public void addVehicle(){
     }
 
-    public void removeVehicle(){
-    }
-
-
-
-
-
-
-
-
-
-
-}
