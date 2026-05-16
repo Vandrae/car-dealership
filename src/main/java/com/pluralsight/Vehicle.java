@@ -88,13 +88,13 @@ public class Vehicle {
 
     @Override
     public String toString() {
-        return "Vehicle{" +
-                "year=" + year +
-                ", make='" + make + '\'' +
-                ", model='" + model + '\'' +
-                ", vehicleType='" + vehicleType + '\'' +
-                ", color='" + color + '\'' +
-                ", price=" + price +
+        return "Vehicle {" +
+                " year = " + year +
+                ", make = " + make +
+                ", model = " + model +
+                ", vehicleType = " + vehicleType +
+                ", color = " + color +
+                ", price = $" + price +
                 '}';
     }
 }

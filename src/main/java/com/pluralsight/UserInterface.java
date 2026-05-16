@@ -109,6 +109,11 @@ public class UserInterface {
     }
 
     public void allVehicleSearch(){
+        processAllVehiclesRequest();
+    }
+
+    public void processAllVehiclesRequest(){
+        displayVehicles(dealership.getAllVehicle());
     }
 
     public void addVehicle(){
