@@ -101,7 +101,12 @@ public class UserInterface {
     }
 
     public void yearRangeSearch(){
+        System.out.println("what is the min Year you are looking for? ");
+        int minYear = input.nextInt();
+        System.out.println("what is the max Year you are looking for? ");
+        int maxYear = input.nextInt();
 
+        displayVehicles(dealership.getVehicleByYear(minYear,maxYear));
     }
 
     public void colorSearch(){

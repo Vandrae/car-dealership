@@ -73,4 +73,14 @@ public class Dealership {
         }
         return makeModelSearch;
     }
+
+    public ArrayList<Vehicle> getVehicleByYear(int minYear,int maxYear){
+        ArrayList<Vehicle> yearSearch = new ArrayList<Vehicle>();
+        for (Vehicle vehicle : inventory){
+            if (vehicle.getYear() >= minYear && vehicle.getYear() <= maxYear){
+                yearSearch.add(vehicle);
+            }
+        }
+        return yearSearch;
+    }
 }
