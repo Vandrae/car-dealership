@@ -110,7 +110,11 @@ public class UserInterface {
     }
 
     public void colorSearch(){
+        System.out.println("what Vehicle color are you looking for? ");
+        String inputColor = input.nextLine();
 
+
+        displayVehicles(dealership.getVehicleColor(inputColor));
     }
 
     public void mileRangeSearch(){

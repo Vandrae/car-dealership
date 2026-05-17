@@ -83,4 +83,14 @@ public class Dealership {
         }
         return yearSearch;
     }
+
+    public ArrayList<Vehicle> getVehicleColor(String inputColor){
+        ArrayList<Vehicle> colorSearch = new ArrayList<Vehicle>();
+        for (Vehicle vehicle : inventory){
+            if (inputColor.equals(vehicle.getColor())){
+                colorSearch.add(vehicle);
+            }
+        }
+        return colorSearch;
+    }
 }
