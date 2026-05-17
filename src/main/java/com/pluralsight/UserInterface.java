@@ -92,7 +92,12 @@ public class UserInterface {
     }
 
     public void makeModelSearch(){
+        System.out.println("what Vehicle Make are you looking for? ");
+        String inputMake = input.nextLine();
+        System.out.println("what Vehicle Model are you looking for? ");
+        String inputModel = input.nextLine();
 
+        displayVehicles(dealership.getVehicleMakeModel(inputMake,inputModel));
     }
 
     public void yearRangeSearch(){

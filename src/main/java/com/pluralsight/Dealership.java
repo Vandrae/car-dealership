@@ -63,4 +63,14 @@ public class Dealership {
         }
         return priceSearch;
     }
+
+    public ArrayList<Vehicle> getVehicleMakeModel(String inputMake,String inputModel){
+        ArrayList<Vehicle> makeModelSearch = new ArrayList<Vehicle>();
+        for (Vehicle vehicle : inventory){
+            if (inputMake.equals(vehicle.getMake()) && inputModel.equals(vehicle.getModel())){
+                makeModelSearch.add(vehicle);
+            }
+        }
+        return makeModelSearch;
+    }
 }
