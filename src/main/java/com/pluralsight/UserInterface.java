@@ -127,7 +127,11 @@ public class UserInterface {
     }
 
     public void typeSearch(){
+        System.out.println("what Type of Vehicle are you looking for? ");
+        String inputType = input.nextLine();
 
+
+        displayVehicles(dealership.getVehicleType(inputType));
     }
 
     public void allVehicleSearch(){

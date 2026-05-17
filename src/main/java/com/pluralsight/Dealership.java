@@ -103,4 +103,14 @@ public class Dealership {
         }
         return mileRangeSearch;
     }
+
+    public ArrayList<Vehicle> getVehicleType(String inputType){
+        ArrayList<Vehicle> typeSearch = new ArrayList<Vehicle>();
+        for (Vehicle vehicle : inventory){
+            if (inputType.equals(vehicle.getVehicleType())){
+                typeSearch.add(vehicle);
+            }
+        }
+        return typeSearch;
+    }
 }
