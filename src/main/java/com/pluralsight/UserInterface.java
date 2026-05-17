@@ -118,7 +118,12 @@ public class UserInterface {
     }
 
     public void mileRangeSearch(){
+        System.out.println("what is the min Mileage you are looking for? ");
+        int minMiles = input.nextInt();
+        System.out.println("what is the max Mileage you are looking for? ");
+        int maxMiles = input.nextInt();
 
+        displayVehicles(dealership.getVehicleByMiles(minMiles,maxMiles));
     }
 
     public void typeSearch(){

@@ -93,4 +93,14 @@ public class Dealership {
         }
         return colorSearch;
     }
+
+    public ArrayList<Vehicle> getVehicleByMiles(int minMiles,int maxMiles){
+        ArrayList<Vehicle> mileRangeSearch = new ArrayList<Vehicle>();
+        for (Vehicle vehicle : inventory){
+            if (vehicle.getOdometer() >= minMiles && vehicle.getOdometer() <= maxMiles){
+                mileRangeSearch.add(vehicle);
+            }
+        }
+        return mileRangeSearch;
+    }
 }
